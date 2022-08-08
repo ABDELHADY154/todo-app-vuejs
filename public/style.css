@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+} */
+body {
+  color: 000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0em;
+  font-style: normal;
+}
+
+.login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-title {
+  font-style: normal;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+.login-form input {
+  height: 50px;
+  width: 343px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: #f6f6f6;
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+.login-form input[type="submit"] {
+  /* padding: 16px, 32px, 16px, 32px; */
+  cursor: pointer;
+  margin-top: 42px;
+  border-radius: 100px;
+  background: #000000;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+::placeholder {
+  position: absolute;
+  font-weight: 500;
+  top: calc(50% - 19px / 2 + 0.5px);
+  color: #bdbdbd;
+  text-align: left;
+}
+.pass-show {
+  position: absolute;
+  right: 16px;
+  top: calc(50% - 16px / 2 + 16px);
+  font-weight: 500;
+  text-align: right;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* task page*/
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .sidenav {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0px !important;
+
+    /* visibility: hidden; */
+  }
+  main {
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+  }
+  nav {
+    display: block !important;
+  }
+}
+.sidenav p {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #000;
+}
+
+@media (min-width: 767px) {
+  nav {
+    display: none !important;
+  }
+}
+
+.sidenav p {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.sidenav .sidenav-icon {
+  /* padding-left: 47px; */
+  color: #000 !important;
+  z-index: 2 !important;
+}
+.sidenav a {
+  width: 250px;
+  height: 55px;
+  top: 42px;
+  margin-bottom: 17px;
+  background: #fff;
+  border-radius: 0px 100px 100px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  -webkit-border-radius: 0px 100px 100px 0px;
+  -moz-border-radius: 0px 100px 100px 0px;
+  -ms-border-radius: 0px 100px 100px 0px;
+  -o-border-radius: 0px 100px 100px 0px;
+}
+.sidenav .active {
+  background-color: #000;
+  border-radius: 0px 100px 100px 0px;
+}
+.sidenav .active p {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+.nav-page {
+  padding-left: 47px;
+}
+.sidenav .active .sidenav-icon {
+  /* padding-left: 47px; */
+  color: #fff !important;
+}
+.sidenav .logout {
+  position: absolute;
+  top: 85%;
+}
+.sidenav ul {
+  list-style: none;
+  display: inline;
+}
+main {
+  margin-left: 343px;
+  /* top: 50px !important; */
+  margin-top: 50px;
+}
+main .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #575767;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+.tasks {
+  margin-bottom: 16px;
+}
+.incomplete-task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.incomplete-task input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background: linear-gradient(180deg, #fcfcfc 0%, #f8f8f8 100%);
+  border: 2px solid #dadada;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.incomplete-task div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+}
+.incomplete-task .task-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #575767;
+  margin: 0;
+}
+.incomplete-task .task-time {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b9b9be;
+  margin: 0;
+}
+.incomplete-task .task-title-done {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b9b9be;
+  margin: 0;
+}
+.locationPin-icon {
+  height: 19px;
+  width: 20px;
+  align-items: flex-start !important; /* left: 0px; */
+  /* top: 0px; */
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.location .task-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #575767;
+  margin: 0;
+}
+
+.location .sub-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b9b9be;
+  margin: 0;
+}
